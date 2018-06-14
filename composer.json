@@ -1,5 +1,5 @@
 {
-    "name": "web3p/ethereum-util",
+    "name": "olegabr/ethereum-util",
     "description": "A collection of utility functions for Ethereum written in PHP.",
     "type": "library",
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "sc0Vu",
             "email": "alk03073135@gmail.com"
+        },
+        {
+            "name": "Oleg Abrosimov",
+	    "email": "olegabrosimovnsk@gmail.com"
         }
     ],
     "config": {
