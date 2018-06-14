@@ -1,31 +1,32 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e710e778d321a6aa09571504dd699bb",
+    "content-hash": "0a22c19a5982380c767dfb13dddbb37d",
     "packages": [
         {
-            "name": "kornrunner/keccak",
-            "version": "1.0.2",
+            "name": "olegabr/keccak",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kornrunner/php-keccak.git",
-                "reference": "b3cd83ded1acff7af40b4ca5b8ea76b164ed0c34"
+                "url": "https://github.com/olegabr/php-keccak.git",
+                "reference": "280978604726639f933326f3be6aaa2eb491398f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kornrunner/php-keccak/zipball/b3cd83ded1acff7af40b4ca5b8ea76b164ed0c34",
-                "reference": "b3cd83ded1acff7af40b4ca5b8ea76b164ed0c34",
+                "url": "https://api.github.com/repos/olegabr/php-keccak/zipball/280978604726639f933326f3be6aaa2eb491398f",
+                "reference": "280978604726639f933326f3be6aaa2eb491398f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.0"
+                "ext-mbstring": "*",
+                "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "~7",
-                "satooshi/php-coveralls": "~2"
+                "php": ">=5.6",
+                "phpunit/phpunit": "5.7.27|6.5"
             },
             "type": "library",
             "autoload": {
@@ -33,7 +34,11 @@
                     "kornrunner\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "kornrunner\\": "test"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -41,14 +46,21 @@
                 {
                     "name": "Boris Momcilovic",
                     "homepage": "https://github.com/kornrunner/php-keccak"
+                },
+                {
+                    "name": "Oleg Abrosimov",
+                    "homepage": "https://github.com/olegabr/php-keccak"
                 }
             ],
-            "description": "Pure PHP implementation of Keccak",
+            "description": "Pure PHP implementation of Keccak with PHP 5.6+ support",
             "keywords": [
                 "keccak",
                 "sha-3"
             ],
-            "time": "2018-03-05T10:32:01+00:00"
+            "support": {
+                "source": "https://github.com/olegabr/php-keccak/tree/1.0.4"
+            },
+            "time": "2018-06-14T11:57:17+00:00"
         },
         {
             "name": "simplito/bigint-wrapper-php",
@@ -242,16 +254,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6"
+                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/478465659fd987669df0bd8a9bf22a8710e5f1b6",
-                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
+                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
                 "shasum": ""
             },
             "require": {
@@ -286,7 +298,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-05-29T17:25:09+00:00"
+            "time": "2018-06-11T23:09:50+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -1653,7 +1665,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1"
+        "php": ">=5.6"
     },
     "platform-dev": []
 }
