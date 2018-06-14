@@ -9,12 +9,12 @@ php:
   - 7.2
 
 install:
-  - composer install
+  - composer install --prefer-dist --no-interaction
 
 notifications:
   email:
     recipients:
-      - alk03073135@gmail.com
+      - olegabrosimovnsk@gmail.com
     on_success: always
     on_failure: always
 
@@ -22,4 +22,4 @@ script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash) -t d2ad6fff-f9bb-452b-a25c-1e13cdd81270
+    - bash <(curl -s https://codecov.io/bash) -t a16b517e-c950-4e85-83d4-4e47d19b8478
