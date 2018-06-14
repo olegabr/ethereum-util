@@ -83,7 +83,7 @@ class Util
      * @param string $value
      * @return string
      */
-    public function sha3(string $value)
+    public function sha3($value)
     {
         $hash = Keccak::hash($value, 256);
 
@@ -99,7 +99,7 @@ class Util
      * @param string $value
      * @return bool
      */
-    public function isZeroPrefixed(string $value)
+    public function isZeroPrefixed($value)
     {
         return (strpos($value, '0x') === 0);
     }
@@ -110,7 +110,7 @@ class Util
      * @param string $value
      * @return string
      */
-    public function stripZero(string $value)
+    public function stripZero($value)
     {
         if ($this->isZeroPrefixed($value)) {
             $count = 1;
@@ -125,7 +125,7 @@ class Util
      * @param string $value
      * @return bool
      */
-    public function isHex(string $value)
+    public function isHex($value)
     {
         return (is_string($value) && preg_match('/^(0x)?[a-f0-9]+$/', $value) === 1);
     }
@@ -136,7 +136,7 @@ class Util
      * @param string $publicKey
      * @return string
      */
-    public function publicKeyToAddress(string $publicKey)
+    public function publicKeyToAddress($publicKey)
     {
         if ($this->isHex($publicKey) === false) {
             throw new InvalidArgumentException('Invalid public key format.');
@@ -155,7 +155,7 @@ class Util
      * @param string $privateKey
      * @return string
      */
-    public function privateKeyToPublicKey(string $privateKey)
+    public function privateKeyToPublicKey($privateKey)
     {
         if ($this->isHex($privateKey) === false) {
             throw new InvalidArgumentException('Invalid private key format.');
@@ -180,7 +180,7 @@ class Util
      * @param int $v
      * @return string
      */
-    public function recoverPublicKey(string $hash, string $r, string $s, int $v)
+    public function recoverPublicKey($hash, $r, $s, $v)
     {
         if ($this->isHex($hash) === false) {
             throw new InvalidArgumentException('Invalid hash format.');
