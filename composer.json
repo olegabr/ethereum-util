@@ -40,8 +40,9 @@
         }
     ],
     "require": {
-        "PHP": "^7.0 || ^8.0",
+        "php": "^7.0 || ^8.0",
         "olegabr/keccak": "~1",
-        "simplito/elliptic-php": "~1.0.6"
+        "simplito/elliptic-php": "~1.0.6",
+        "phpseclib/phpseclib": "^3.0"
     }
 }

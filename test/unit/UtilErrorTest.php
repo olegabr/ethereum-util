@@ -212,4 +212,30 @@ class UtilErrorTest extends TestCase
         $this->assertEquals('8144a6fa26be252b86456491fbcd43c1de7e022241845ffea1c3df066f7cfede', $util->hashPersonalMessage('Hello world'));
         $this->assertNotEquals($util->sha3('Hello world'), $util->hashPersonalMessage('Hello world'));
     }
+
+    /**
+     * testToBnInvalidNumber
+     *
+     * @return void
+     */
+    public function testToBnInvalidNumber()
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('toBn number must be valid hex string.');
+
+        (new Util)->toBn('1.2.3');
+    }
+
+    /**
+     * testToBnInvalidHex
+     *
+     * @return void
+     */
+    public function testToBnInvalidHex()
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('toBn number must be valid hex string.');
+
+        (new Util)->toBn('not hex');
+    }
 }
