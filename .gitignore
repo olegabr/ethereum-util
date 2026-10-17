@@ -6,3 +6,6 @@ composer.phar
 # composer.lock
 /nbproject/
 /composer.lock
+# agent scratch files (disposable)
+.agent-tmp/
+.phpunit.result.cache
